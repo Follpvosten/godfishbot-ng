@@ -1,0 +1,7 @@
+{0} exploded
+{0} blew up
+{0} detonated
+{0} used Explosion!
+{0} used Self-Destruct!
+{0} played minesweeper in real-life
+{0} ate a grenade

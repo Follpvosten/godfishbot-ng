@@ -1,0 +1,6 @@
+{0} exploded all over {1}'s face
+{0} blew up at {1}
+{0} kamikaze'd {1}
+{0} blew up {1}'s house
+{0} used Explosion! {1} fainted!
+{0} ate a grenade from {1}

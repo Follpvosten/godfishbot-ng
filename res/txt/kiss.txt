@@ -1,0 +1,9 @@
+{0} kissed {1}
+{0} kissed {1} tenderly
+{0} kissed {1} passionately
+{0} kissed {1} sexually
+{0} kissed {1} like a wild magikarp
+{1}'s mouth got destroyed by {0}'s furious kiss
+{0} kissed {1} on the nose
+{0} kissed {1} on the forehead
+{0} kissed {1} on the neck

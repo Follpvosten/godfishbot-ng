@@ -1,0 +1,4 @@
+{0} hugged {1}
+{0} cuddled with {1}
+{0} hugged {1} tightly
+{1} got crushed by {0}'s Bewear-like hug
