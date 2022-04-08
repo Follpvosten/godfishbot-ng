@@ -219,7 +219,10 @@ async fn main() -> Result<()> {
     let mut bot = bot.with_other_state((client, img_id_map));
     bot.command("flausch", flausch::handler);
     info!("Starting event loop...");
-    bot.polling().start().await.unwrap();
+    tokio::select! {
+        res = bot.polling().start() => { res.unwrap(); }
+        _ = tokio::signal::ctrl_c() => { info!("Ctrl-C received"); }
+    };
     Ok(())
 }
 
