@@ -7,12 +7,12 @@ edition = "2018"
 
 [dependencies]
 tokio = { version = "1", features = ["rt-multi-thread", "macros", "signal"] }
-tbot = { git = "https://gitlab.com/SnejUgal/tbot.git", branch = "master" }
+tbot = { git = "https://gitlab.com/SnejUgal/tbot.git", branch = "master", default-features = false, features = ["rustls"] }
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 color-eyre = "0.6"
 rand = "0.8"
-reqwest = { version = "0.11", features = ["json"] }
+reqwest = { version = "0.11", default-features = false, features = ["json", "rustls-tls"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 itertools = "0.10"

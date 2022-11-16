@@ -1,5 +1,5 @@
 # 1. build the executable
-FROM rust:1-bullseye AS builder
+FROM rust:1.65-bullseye AS builder
 RUN apt update && apt install libssl-dev -y
 WORKDIR /godfishbot
 COPY Cargo.toml Cargo.lock ./
@@ -14,7 +14,7 @@ RUN apt update \
     && apt autoremove --purge -y \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=builder /godfishbot/target/release/godfishbot /usr/bin/godfishbot
-RUN adduser --disabled-password --home /godfishbot godfishbot
+RUN useradd --create-home --home-dir /godfishbot godfishbot
 WORKDIR /godfishbot
 COPY res ./res
 RUN chown -R godfishbot:godfishbot /godfishbot

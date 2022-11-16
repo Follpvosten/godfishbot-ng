@@ -88,7 +88,7 @@ fn rank_love(names: &[&str]) -> String {
             {
                 continue;
             }
-            combos.insert((*name1, *name2), test_love(*name1, *name2));
+            combos.insert((*name1, *name2), test_love(name1, name2));
         }
     }
     let mut tmp = combos.iter().collect::<Vec<_>>();
