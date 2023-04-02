@@ -1,5 +1,5 @@
 # 1. build the executable
-FROM rust:1.65-bullseye AS builder
+FROM docker.io/rust:1.68-bullseye AS builder
 RUN apt update && apt install libssl-dev -y
 WORKDIR /godfishbot
 COPY Cargo.toml Cargo.lock ./
@@ -7,7 +7,7 @@ COPY src ./src
 RUN cargo build --release
 
 # 2. copy executable and required files to a target container
-FROM debian:bullseye-slim AS runner
+FROM docker.io/debian:bullseye-slim AS runner
 RUN apt update \
     && apt full-upgrade -y \
     && apt install ca-certificates -y \
