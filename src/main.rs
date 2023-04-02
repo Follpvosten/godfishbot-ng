@@ -106,6 +106,7 @@ async fn main() -> Result<()> {
         .audio("lvlup", &["lvlup.mp3"], None)
         .audio("sanic", &["sanic.mp3"], None)
         .audio("seeyouagain", &["seeyouagain.mp3"], None)
+        .audio("creepy", &["creepy.mp3"], None)
         .image("bully", "bully.jpg")
         .image("bully2", "bully2.jpg")
         .image("spicken", "spicken.jpg")
